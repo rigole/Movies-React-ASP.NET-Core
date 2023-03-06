@@ -41,7 +41,7 @@ function App() {
           },
         ]
       })
-    }, 1000);
+    }, 3000);
 
     return () => clearTimeout(timerId);
   });
