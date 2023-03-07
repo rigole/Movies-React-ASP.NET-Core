@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import IndividualMovie from './movies/IndividualMovie';
 import './App.css';
 import MoviesList from "./movies/MoviesList";
+import Button from './utils/Button';
 import { movieDTO, landingPageDTO } from './movies/movies.model';
 
 function App() {
@@ -51,14 +52,15 @@ function App() {
   //const UpcomingReleases: movieDTO[] 
 
   return (
-    <>
+    <div className="container">
+      <h3>testing Text</h3>
       <h3>In Theather</h3>
       <MoviesList movies={movies.inTheaters}/>
 
       
       <h3>Upcoming Releases</h3>
       <MoviesList movies={movies.upcomingReleases}/>
-    </>
+    </div>
   );
 }
 
