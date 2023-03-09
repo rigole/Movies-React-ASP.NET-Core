@@ -5,7 +5,7 @@ import { movieDTO, landingPageDTO } from '../movies/movies.model';
 
 
 function LandingPage() {
-    
+
     const [movies, setMovies] = useState<landingPageDTO>({})
 
     useEffect(() => {
@@ -48,20 +48,17 @@ function LandingPage() {
     
     
       return(
-        <>
+
+
+        <div>
             <h3>testing Text</h3>
             <h3>In Theather</h3>
             <MoviesList movies={movies.inTheaters}/>
             <h3>Upcoming Releases</h3>
             <MoviesList movies={movies.upcomingReleases}/>
-        </>
+        </div>
            
       )
 }
 
 export default LandingPage
-
-  
-  //const inTheaters: movieDTO[] = 
-
-  //const UpcomingReleases: movieDTO[] 
