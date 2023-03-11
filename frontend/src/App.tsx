@@ -1,8 +1,12 @@
+
+import IndividualMovie from './movies/IndividualMovie';
 import { Routes, Route } from "react-router-dom"
 import './App.css';
 import routes from './route-config'
+import Button from './utils/Button';
+import LandingPage from "./movies/LandingPage";
 import Menu from './Menu';
-
+import IndexGenres from './genres/indexGenres';
 
 function App() {
 
@@ -15,9 +19,7 @@ function App() {
         
         <Routes>
          {routes.map(route => 
-          <Route key={route.path} path={route.path}>
-            <route.component/>
-          </Route>
+          <Route key={route.path} path={route.path} element={<route.component/>} /> 
           )}
         </Routes>
       </div>
