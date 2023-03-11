@@ -13,6 +13,28 @@ function Menu () {
                                 Genres
                             </NavLink>
                         </li>
+
+                        <li className="nav-item">
+                            <NavLink to="/movies/filter" className="nav-link">
+                               Filter Movies
+                            </NavLink>
+                        </li>
+                        <li className="nav-item">
+                            <NavLink to="/actors" className="nav-link">
+                               Actors
+                            </NavLink>
+                        </li>
+                        <li className="nav-item">
+                            <NavLink to="/moviestheaters" className="nav-link">
+                                Movie Theaters
+                            </NavLink>
+                        </li>
+                        <li className="nav-item">
+                            <NavLink to="/movies/create" className="nav-link">
+                                Create a Movie
+                            </NavLink>
+                        </li>
+                       
                     </ul>
                 </div>
             </div>
