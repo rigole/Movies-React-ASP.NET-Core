@@ -3,7 +3,7 @@
 function Button(props: buttonProps){
 
     return(
-            <button className="btn btn-primary">
+            <button className="btn btn-primary" onClick={props.onClick}>
                 {props.children}
             </button>
     )
@@ -11,6 +11,7 @@ function Button(props: buttonProps){
 
 interface buttonProps{
     children: React.ReactNode;
+    onClick(): void;
 }
   
    
