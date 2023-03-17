@@ -16,27 +16,31 @@ import EditMovie from "./movies/EditMovie";
 import FilterMovie from "./movies/FilterMovies";
 import CreateMovie from "./movies/CreateMovie";
 
+import RedirectToLandingPage from "./utils/RedirectToLandingPage";
+
 const routes = [
-    {path: '/', component: LandingPage},
+    {path: '/', component: LandingPage },
 
 
     {path: '/genres', component: IndexGenres},
     {path: '/genres/create', component: CreateGenre},
-    {path: '/genres/edit', component: EditGenre},
+    {path: '/genres/edit/:id(\\d+)', component: EditGenre},
 
 
     {path: '/actors', component: IndexActors},
     {path: '/actors/create', component: CreateActors},
-    {path: '/actors/edit', component: EditActors},
+    {path: '/actors/edit/:id(\\d+)', component: EditActors},
 
 
     {path: '/moviestheaters', component: IndexMovieTheather},
     {path: '/moviestheaters/create', component: CreateMovieTheater},
-    {path: '/moviestheaters/edit', component: EditMovieTheater},
+    {path: '/moviestheaters/edit/:id(\\d+)', component: EditMovieTheater},
 
     {path: '/movies/create', component: CreateMovie},
-    {path: '/movies/edit', component: EditMovie},
+    {path: '/movies/edit/:id(\\d+)', component: EditMovie},
     {path: '/movies/filter', component: FilterMovie},
+
+    {path: '*', component: RedirectToLandingPage}
     
 ];
 
