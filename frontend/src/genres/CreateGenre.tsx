@@ -1,6 +1,7 @@
 import { Link, useNavigate } from "react-router-dom"
 import Button from "../utils/Button";
 import { Formik, Field, Form, ErrorMessage } from "formik";
+import TextField from "../forms/TextField";
 import * as Yup from 'yup';
 
 function CreateGenre(){
@@ -16,13 +17,7 @@ function CreateGenre(){
           })}
           >
             <Form>
-              <div className="mb-3">
-                <label htmlFor="name">Name</label>
-                <Field name="name" id="name" className="form-control"/>
-                <ErrorMessage name="name">{msg => 
-                  <div className="text-danger">{msg}</div>}
-                </ErrorMessage>
-              </div>
+              <TextField field="name"/>
               <Button type="submit">Save Changes</Button>
               <Link className="btn btn-secondary" to="/genres">Cancel</Link>
             </Form>
