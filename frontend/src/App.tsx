@@ -7,6 +7,9 @@ import Button from './utils/Button';
 import LandingPage from "./movies/LandingPage";
 import Menu from './Menu';
 import IndexGenres from './genres/indexGenres';
+import configureValidations from './Validation';
+
+configureValidations();
 
 function App() {
 
