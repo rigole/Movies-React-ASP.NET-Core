@@ -1,6 +1,7 @@
 import { Formik, Form, FormikHelpers } from "formik";
 import TextField from "../forms/TextField";
 import DateFields from "../forms/DateField";
+import ImageField from "../forms/ImageField";
 import Button from "../utils/Button";
 import { Link } from "react-router-dom";
 import { actorCreationDTO } from "./actors.model";
@@ -22,6 +23,7 @@ function ActorForm(props: actorFormProps){
                 <Form>
                     <TextField displayName="Name" field="name"/>
                     <DateFields displayName="Date of Birth" field="dateOfBirth" />
+                    <ImageField displayName="Picture" field="picture" imageURL={props.model.pictureURL}/>
                     <Button disabled={formikProps.isSubmitting} type="submit">Save Changes</Button>
                     <Link to="/actors" className="btn btn-secondary">Cancel</Link>
                 </Form>
