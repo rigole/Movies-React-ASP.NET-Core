@@ -29,7 +29,7 @@ const routes = [
 
     {path: '/actors', component: IndexActors},
     {path: '/actors/create', component: CreateActors},
-    {path: '/actors/edit/:id(\\d+)', component: EditActors},
+    {path: '/actors/edit/:id', component: EditActors},
 
 
     {path: '/moviestheaters', component: IndexMovieTheather},
