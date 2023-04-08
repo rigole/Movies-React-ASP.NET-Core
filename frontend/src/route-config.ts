@@ -34,7 +34,7 @@ const routes = [
 
     {path: '/moviestheaters', component: IndexMovieTheather},
     {path: '/moviestheaters/create', component: CreateMovieTheater},
-    {path: '/moviestheaters/edit/:id(\\d+)', component: EditMovieTheater},
+    {path: '/moviestheaters/edit/:id(//d+)', component: EditMovieTheater},
 
     {path: '/movies/create', component: CreateMovie},
     {path: '/movies/edit/:id(\\d+)', component: EditMovie},

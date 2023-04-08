@@ -5,7 +5,7 @@ function IndexMovieTheather(){
     return (
         <>
             <h3>Movie Theaters</h3>
-            <Link className="btn btn-primary" to="/movietheathers/create/">Create movie theather</Link>
+            <Link className="btn btn-primary" to="/moviestheaters/edit/">Create movie theather</Link>
         </>
     )
 }
