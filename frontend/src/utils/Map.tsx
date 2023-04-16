@@ -17,7 +17,7 @@ L.Marker.prototype.options.icon = defaultIcon;
 
 function Map(props: mapProps){
 
-    const [coordinates, setCoordinates] = useState<coordinateDTO[]>([])
+    const [coordinates, setCoordinates] = useState<coordinateDTO[]>(props.coordinates)
 
     return (
         <MapContainer
@@ -25,11 +25,12 @@ function Map(props: mapProps){
             style={{ height: props.height }}
         >
             <TileLayer 
-            attribution="React Movies"
-            url="https://bocir-prod-bucket.s3.amazonaws.com/medias/W3HrhWazhO/image/MadameMonsieur1657351653514.jpg"
+                attribution="React Movies"
+                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
             <MapClick setCoordinates={coordinates => {
                 setCoordinates([coordinates]);
+                props.handleMapClick(coordinates);
             }}/>
             {coordinates.map((coordinate, index) => <Marker key={index} position={[coordinate.lat, coordinate.lng]}/>)}
         </MapContainer>
@@ -38,6 +39,8 @@ function Map(props: mapProps){
 
 interface mapProps{
     height: string;
+    coordinates: coordinateDTO[];
+    handleMapClick(coordinates: coordinateDTO): void
 }
 
 Map.defaultProps = {
@@ -54,5 +57,6 @@ function MapClick(props: mapClickProps){
 
 interface mapClickProps {
     setCoordinates(coordinates: coordinateDTO): void;
+    
 }
 export default Map
