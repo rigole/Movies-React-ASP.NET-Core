@@ -41,13 +41,7 @@ function ImageField(props: imageFieldsProps){
             <div>
                 <input type="file" accept=".jpg,.jpeg,.png" onChange={handleOnChange} />
             </div>
-            {imageBase64 ? 
-                <div>
-                    <div style={divStyle}>
-                        <img style={imgStyle} src={imageBase64} alt="selected" />
-                    </div>
-                </div> : null
-            }
+          
 
 {imageBase64 ? 
                 <div>
