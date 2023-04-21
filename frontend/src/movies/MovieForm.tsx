@@ -37,6 +37,7 @@ function MovieForm(props: movieFormProps){
             initialValues={props.model}
             onSubmit={(values, actions) => {
                 values.genresIds = selectedGenres.map(item => item.key);
+                values.movieTheatersIds = selectedMoviesTheaters.map(item => item.key);
                 props.onSubmit(values, actions)
             }}
             validationSchema={Yup.object({
@@ -67,6 +68,22 @@ function MovieForm(props: movieFormProps){
                         }}
                     
                     />
+
+                    <MultipleSelector  
+                        displayName="Movie Theaters"
+                        nonSelected={nonSelectedMovieTheaters}
+                        selected={selectedMoviesTheaters}
+                        onChange={(selected, nonSelected) => {
+                          setSelectedMoviesTheaters(selected)
+                          setNonSelectedMovieTheaters(nonSelected)
+                        }}
+                    
+                    />
+
+
+
+
+
                     <TextField field="name" displayName="Name"/>
                     <Button disabled={formikProps.isSubmitting} type="submit">Save Changes</Button>
                     <Link className="btn btn-secondary" to="/genres">Cancel</Link>

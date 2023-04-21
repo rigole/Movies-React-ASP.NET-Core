@@ -17,4 +17,5 @@ export interface movieCreationDTO {
     poster?: File;
     posterURL?:string;
     genresIds?:number[];
+    movieTheatersIds?: number[];
 }
